@@ -177,7 +177,6 @@ onChildRemoved(ref(db, "messages"), snapshot => {
   if (card) card.remove();
 });
 
-// Render messages
 function renderMessage(data, messageId, isUpdate=false) {
   const messageBox = document.getElementById("messages");
   const currentUser = localStorage.getItem("userEmail") || "noemail";
@@ -198,18 +197,20 @@ function renderMessage(data, messageId, isUpdate=false) {
     messageBox.appendChild(card);
   }
 
+  const displayName = data.name || localStorage.getItem("username") || "Anonymous";
+
   const profilePicHTML = data.userPhoto && data.userPhoto.trim() !== "" 
     ? `<img src="${data.userPhoto}" style="width:32px;height:32px;border-radius:50%;object-fit:cover;">`
     : `<div style="width:32px;height:32px;border-radius:50%;
          background:#1e6091;display:flex;align-items:center;
          justify-content:center;color:#fff;font-weight:bold;font-size:16px;">
-         ${data.name.charAt(0).toUpperCase()}
+         ${displayName.charAt(0).toUpperCase()}
        </div>`;
 
   card.innerHTML = `
     <div style="display:flex;align-items:center;gap:8px;">
       ${profilePicHTML}
-      <strong>${data.name}</strong>
+      <strong>${displayName}</strong>
       <span style="font-size:0.7rem;color:#ccc;margin-left:auto;">
         ${formatTime(data.timestamp)} ${data.edited?'(edited)':''}
       </span>
@@ -218,6 +219,7 @@ function renderMessage(data, messageId, isUpdate=false) {
     <div class="msg-btns" style="display:none;gap:6px;position:absolute;top:4px;right:4px;"></div>
   `;
 
+  // Edit/Delete buttons only for current user
   if(isUserMessage){
     const btnContainer = card.querySelector(".msg-btns");
 
@@ -263,6 +265,7 @@ function renderMessage(data, messageId, isUpdate=false) {
 
   setTimeout(()=>messageBox.scrollTop=messageBox.scrollHeight,100);
 }
+
 
 // Format timestamp
 function formatTime(ts){
