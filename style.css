@@ -1,0 +1,153 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5;
+}
+
+/* Main container */
+.main-container {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  height: 600px;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Left image panel */
+.image-panel {
+  flex: 1;
+  position: relative;
+}
+
+.image-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-panel .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(74, 107, 56, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.image-panel .overlay h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.image-panel .overlay p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Right form panel */
+.form-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.form-panel h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #4a6b38;
+}
+
+.form-panel .subtext {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.form-panel input {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.form-panel input:focus {
+  border-color: #4a6b38;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px;
+  width: 100%;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4a6b38;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #3e592d;
+}
+
+.btn.outline {
+  background-color: transparent;
+  color: #4a6b38;
+  border: 2px solid #4a6b38;
+}
+
+.btn.outline:hover {
+  background-color: #4a6b38;
+  color: #fff;
+}
+
+.google-btn {
+  padding: 12px;
+  width: 100%;
+  border: 2px solid #db4437;
+  border-radius: 8px;
+  color: #db4437;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.google-btn:hover {
+  background-color: #db4437;
+  color: #fff;
+}
+
+/* Note text */
+.note {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 15px;
+}

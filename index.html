@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyChat – Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-container">
+
+    
+    <div class="image-panel">
+      <img src="./images/chat app illustration.jfif" alt="Chat illustration">
+      <div class="overlay">
+        <h1>Connect with Friends 🤍</h1>
+        <p>Talk freely, share moments, and make new friends.</p>
+      </div>
+    </div>
+
+    
+    <div class="form-panel">
+      <h2>Welcome to MyChat</h2>
+      <p class="subtext">Register or log in to start your conversations!</p>
+      
+      <input type="email" id="email" placeholder="Your email here">
+      <input type="password" id="password" placeholder="Your password here">
+
+      <button id="signup" class="btn">Register</button>
+      <button id="login" class="btn outline">Sign In</button>
+
+      <button id="google-btn" class="google-btn">
+        Sign in with Google
+      </button>
+
+      <p class="note">
+        Enter a valid email (password ≥ 6 characters). After login you'll pick a display name.
+      </p>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

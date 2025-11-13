@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Display Name</title>
+  <link rel="stylesheet" href="user.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="username-container">
+    <div class="glass-card">
+      <h1 class="fade-in">👋 Hello!</h1>
+      <p class="subtitle fade-in">Pick a fun display name to enter the chat</p>
+      
+      <div class="input-group slide-up">
+        <input type="text" id="username" placeholder="Type your display name..." required>
+        <button class="btn" id="saveUser">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById('saveUser');
+    btn.addEventListener('click', () => {
+      const username = document.getElementById('username').value.trim();
+      if(username){
+        localStorage.setItem('username', username);
+        window.location.href = 'chat.html';
+      } else {
+        alert('Please enter a display name!');
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
