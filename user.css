@@ -102,3 +102,54 @@ body {
   0% {opacity: 0; transform: translateY(20px);}
   100% {opacity: 1; transform: translateY(0);}
 }
+
+/* ------------------ Media Queries for Responsiveness ------------------ */
+
+/* Tablets & small desktops */
+@media (max-width: 768px) {
+  .glass-card {
+    padding: 30px 20px;
+    max-width: 350px;
+  }
+
+  .glass-card h1 {
+    font-size: 1.8rem;
+  }
+
+  .glass-card .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .input-group input,
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+    height: auto;
+  }
+
+  .glass-card {
+    padding: 25px 15px;
+    max-width: 300px;
+  }
+
+  .glass-card h1 {
+    font-size: 1.5rem;
+  }
+
+  .glass-card .subtitle {
+    font-size: 0.85rem;
+  }
+
+  .input-group input,
+  .btn {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+}

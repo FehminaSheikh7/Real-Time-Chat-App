@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f2f5;
+   background: #fff
 }
 
 /* Main container */
@@ -150,4 +150,79 @@ body {
   font-size: 0.85rem;
   color: #777;
   margin-top: 15px;
+}
+
+/* ------------------ Media Queries for Responsiveness ------------------ */
+
+/* Tablets & small desktops */
+@media (max-width: 992px) {
+  .main-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .image-panel,
+  .form-panel {
+    flex: unset;
+    width: 100%;
+    height: 300px; /* image panel height */
+  }
+
+  .form-panel {
+    padding: 30px 20px;
+  }
+
+  .image-panel .overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .image-panel .overlay p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    height: auto;
+  }
+
+  .main-container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .image-panel {
+    height: 200px;
+  }
+
+  .form-panel {
+    padding: 20px 15px;
+  }
+
+  .form-panel h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-panel .subtext {
+    font-size: 0.9rem;
+  }
+
+  .form-panel input,
+  .btn,
+  .google-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .image-panel .overlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .image-panel .overlay p {
+    font-size: 0.85rem;
+  }
 }
